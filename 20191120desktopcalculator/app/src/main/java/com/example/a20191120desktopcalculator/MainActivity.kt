@@ -120,14 +120,18 @@ class MainActivity : AppCompatActivity() {
             txtans.setText("$ans")
             }
         btclear.setOnClickListener {
-                ans = 0
-                num = 0
-                plus = 0
-                minus = 0
-                multi = 0
-                div = 0
+            ans = 0
+            num = 0
+            plus = 0
+            minus = 0
+            multi = 0
+            div = 0
             txtans.setText(" ")
-            }
+        }
+        btdel.setOnClickListener {
+            num = num / 10;
+            txtans.setText("$num")
+        }
         btequal.setOnClickListener {
             if (plus==1){
                 ans = ans + num
